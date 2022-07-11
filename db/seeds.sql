@@ -1,0 +1,40 @@
+INSERT INTO department (name)
+VALUES
+    ('IT'),
+    ('Foreclosure'),
+    ('Bankruptcy'),
+    ('Marketing'),
+    ('Finance'),
+    ('Human Resources');
+
+INSERT INTO role (title, salary, department_id)
+VALUES  
+    ('IT Team Lead', '$95,000', 1),
+    ('Computer Support Staff', '$70,000', 1),
+    ('Computer Support Intern', '$35,000', 1),
+    ('FC Attorney', '$150,000', 2),
+    ('FC Legal Assistant', '$45,000', 2),
+    ('BK Attorney', '$150,000', 3),
+    ('BK Legal Assistant', '$45,000', 3),
+    ('Marketing Manager', '$60,000', 4),
+    ('Marketing Team Member', '$50,000', 4),
+    ('Finance Manger', '$85,000', 5),
+    ('Financial Analyst', '$65,000', 5),
+    ('HR Manager', '$70,000', 6),
+    ('HR Team Member', '$50,000', 6);
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES  
+    ('Andrew', 'Smith', 1, 1),
+    ('Davey', 'Johnson', 2, 1),
+    ('Michael', 'Pittman', 3, 1),
+    ('Aldous', 'Huxley', 4, 4),
+    ('Scout', 'Finch', 5, 4),
+    ('Simon', 'Powell', 6, 6),
+    ('Jenny', 'Gillis', 7, 6),
+    ('David', 'Beckham', 8, 8),
+    ('Josef', 'Martinez', 9, 8),
+    ('Tom', 'Brady', 10, 10),
+    ('Peyton', 'Manning', 11, 10),
+    ('Gary', 'Payton', 12, 12),
+    ('Rafael', 'Nadal', 13, 12);
