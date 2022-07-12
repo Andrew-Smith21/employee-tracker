@@ -21,48 +21,38 @@ const displayMenu = () => {
     .then(menu => {
         if (menu.menuSelection === 'View All Departments') {
             const sql = `SELECT * FROM department`
-            console.table(  
-                db.query(sql, (err, rows) => {
-                    if (err) {
-                        res.status(500).json({ error: err.message });
-                        return;
-                    }
-                    return rows
-                })
-            )
+            
+            db.query(sql, (err, rows) => {
+                if (err) {
+                    res.status(500).json({ error: err.message });
+                    return;
+                }
+                console.table(rows)
+            })
+            
         }
         else if (menu.menuSelection === 'View All Roles') {
             const sql = `SELECT * FROM role`
             
-            console.table(  
-                db.query(sql, (err, rows) => {
-                    if (err) {
-                        res.status(500).json({ error: err.message });
-                        return;
-                    }
-                    res.json({
-                        message: 'success',
-                        data: rows
-                    });
-                })
-            )
+            db.query(sql, (err, rows) => {
+                if (err) {
+                    res.status(500).json({ error: err.message });
+                    return;
+                }
+                console.table(rows)
+            })
         }
 
         else if (menu.menuSelection === 'View All Employees') {
             const sql = `SELECT * FROM employee`
             
-            console.table(  
-                db.query(sql, (err, rows) => {
-                    if (err) {
-                        res.status(500).json({ error: err.message });
-                        return;
-                    }
-                    res.json({
-                        message: 'success',
-                        data: rows
-                    });
-                })
-            )
+            db.query(sql, (err, rows) => {
+                if (err) {
+                    res.status(500).json({ error: err.message });
+                    return;
+                }
+                console.table(rows)
+            })
         }
 
         else if (menu.menuSelection === 'Add a Department') {
@@ -118,7 +108,7 @@ const displayMenu = () => {
                     }
                 },
                 {
-                    type: 'input',
+                    type: 'list',
                     name: 'roleDepartment',
                     message: 'Which department does the role belong to?',
                     validate: menu => {
@@ -131,10 +121,11 @@ const displayMenu = () => {
                 }
             ])
             .then( input => {
-                const sql = `INSERT INTO role (title, salary)
+                const sql = `INSERT INTO role (title, salary, department_id)
                     VALUES
                     ('${input.roleName}'),
-                    ('${input.roleSalary}),`
+                    ('${input.roleSalary}),
+                    `
                 db.query(sql, (err, rows) => {
                     return rows
                 })
