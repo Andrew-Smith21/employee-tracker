@@ -9,19 +9,19 @@ VALUES
 
 INSERT INTO role (title, salary, department_id)
 VALUES  
-    ('IT Team Lead', '$95,000', 1),
-    ('Computer Support Staff', '$70,000', 1),
-    ('Computer Support Intern', '$35,000', 1),
-    ('FC Attorney', '$150,000', 2),
-    ('FC Legal Assistant', '$45,000', 2),
-    ('BK Attorney', '$150,000', 3),
-    ('BK Legal Assistant', '$45,000', 3),
-    ('Marketing Manager', '$60,000', 4),
-    ('Marketing Team Member', '$50,000', 4),
-    ('Finance Manger', '$85,000', 5),
-    ('Financial Analyst', '$65,000', 5),
-    ('HR Manager', '$70,000', 6),
-    ('HR Team Member', '$50,000', 6);
+    ('IT Team Lead', '95000', 1),
+    ('Computer Support Staff', '70000', 1),
+    ('Computer Support Intern', '35000', 1),
+    ('FC Attorney', '150000', 2),
+    ('FC Legal Assistant', '45000', 2),
+    ('BK Attorney', '150000', 3),
+    ('BK Legal Assistant', '45000', 3),
+    ('Marketing Manager', '60000', 4),
+    ('Marketing Team Member', '50000', 4),
+    ('Finance Manger', '85000', 5),
+    ('Financial Analyst', '65000', 5),
+    ('HR Manager', '70000', 6),
+    ('HR Team Member', '50000', 6);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES  
