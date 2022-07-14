@@ -18,7 +18,7 @@ VALUES
     ('BK Legal Assistant', '45000', 3),
     ('Marketing Manager', '60000', 4),
     ('Marketing Team Member', '50000', 4),
-    ('Finance Manger', '85000', 5),
+    ('Finance Manager', '85000', 5),
     ('Financial Analyst', '65000', 5),
     ('HR Manager', '70000', 6),
     ('HR Team Member', '50000', 6);
